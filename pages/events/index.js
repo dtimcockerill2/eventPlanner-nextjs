@@ -1,4 +1,4 @@
-import { getFeaturedEvents } from "../dummy-data";
+import { getFeaturedEvents } from "../../dummy-data";
 
 function EventsPage() {
   return (

@@ -1,4 +1,7 @@
-import Link from "next/link";
+import Button from "../UI/Button";
+import DateIcon from "../icons/date-icon";
+import AddressIcon from "../icons/address-icon";
+import ArrowRightIcon from "../icons/arrow-right-icon";
 
 // this can be classes or styles
 import classes from "./event-item.module.css";
@@ -23,14 +26,21 @@ function EventItem(props) {
           <h2>{title}</h2>
         </div>
         <div className={classes.date}>
+          <DateIcon />
           <time>{humanReadableDate}</time>
         </div>
         <div className={classes.address}>
+          <AddressIcon />
           <address>{formattedAddress}</address>
         </div>
       </div>
       <div className={classes.actions}>
-        <Link href={exploreLink}>Explore Event</Link>
+        <Button link={exploreLink}>
+          <span>Explore Event</span>
+          <span>
+            <ArrowRightIcon />
+          </span>
+        </Button>
       </div>
     </li>
   );
